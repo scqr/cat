@@ -11,9 +11,8 @@ window.onload = function () {
     var iLen  = oImgList.children.length;
 
     // 计算UL的宽度
-    const PER_WIDTH = document.documentElement.clientWidth || document.body.clientWidth;
-    oImgList.style.width = iLen * PER_WIDTH+1;
-    console.log("PER_WIDTH"+PER_WIDTH);
+    const PER_WIDTH =  document.documentElement.clientWidth || document.body.clientWidth;;
+    oImgList.style.width = iLen * PER_WIDTH;
 
     // 默认显示第0张
     var iIndex = 0;
@@ -32,7 +31,7 @@ window.onload = function () {
     oLeftBtn.addEventListener('click', function () {
         iIndex--;
         if(iIndex < 0) {
-            oImgList.style.left = - (iLen - 1) * PER_WIDTH;
+            oImgList.style.left = - (iLen - 1) * PER_WIDTH + 'px';
             iIndex = iLen - 2;
         }
         bufferMove(oImgList, {left: -iIndex * PER_WIDTH});
@@ -57,8 +56,7 @@ window.onload = function () {
             oImgList.style.left = 0;
             iIndex = 1;
         }
-        console.log("马上到"+iIndex);
-        console.log("iLen"+iLen);
-        bufferMove(oImgList, {left: - iIndex * PER_WIDTH});
+        /*console.log("向右="+iIndex);*/
+        bufferMove(oImgList, {left: -iIndex * PER_WIDTH});
     }
 };
