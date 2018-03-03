@@ -1,0 +1,25 @@
+{
+  "name": "cat",
+  "version": "1.0.0",
+  "description": "phone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scqr/cat.git"
+  },
+  "author": "coco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scqr/cat/issues"
+  },
+  "homepage": "https://github.com/scqr/cat#readme",
+  "devDependencies": {
+    "gulp-babel-minify": "^0.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-ruby-sass": "^3.0.0"
+  }
+}
