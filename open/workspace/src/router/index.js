@@ -5,9 +5,16 @@ import "../assets/banner.js"
 import "../assets/youziku.api.min.js"
 import Vue from 'vue'
 import Router from 'vue-router'
-import bookcity from '@/components/bookcity'
-import bookshelf from '@/components/bookshelf'
-import my from '@/components/my'
+import bookcity from '@/pages/bookcitys'
+import bookshelf from '@/pages/bookshelfs'
+import my from '@/pages/mys'
+import blist from '@/pages/blist'
+import brecommend from '@/pages/brecommend'
+import bclassify from '@/pages/bclassify'
+import bstory from '@/pages/bstory'
+import collections from '@/pages/collections'
+import downloads from '@/pages/downloads'
+import historys from '@/pages/historys'
 
 Vue.use(Router)
 
@@ -32,6 +39,41 @@ export default new Router({
       path: '/my',
       name: 'my',
       component: my
+    },
+    {
+      path: '/blist',
+      name: 'blist',
+      component: blist
+    },
+    {
+      path: '/brecommend',
+      name: 'brecommend',
+      component: brecommend
+    },
+    {
+      path: '/bclassify',
+      name: 'bclassify',
+      component: bclassify
+    },
+    {
+      path: '/bstory',
+      name: 'bstory',
+      component: bstory
+    },
+    {
+      path: '/collections',
+      name: 'collections',
+      component: collections
+    },
+    {
+      path: '/downloads',
+      name: 'downloads',
+      component: downloads
+    },
+    {
+      path: '/historys',
+      name: 'historys',
+      component: historys
     }
   ]
 })

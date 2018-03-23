@@ -1,6 +1,5 @@
 <template>
-  <section class="section_bookshelf content">
-      <ul class="pic none show">
+  <ul class="pic none show content">
         <li>
           <a class="imgs" href="javascript:;"><img src="../assets/img/bookshelf_0.png"></a>
           <a class="ps" href="javascript:;"><p>我的影帝大人</p></a>
@@ -70,22 +69,13 @@
           <a class="ps" href="javascript:;"><p>校园高手</p></a>
         </li>
       </ul>
-      <div class="empty none">
-        <img src="../assets/img/bookshelf_other.png"/>
-        <p>下载漫画，畅享离线阅读</p>
-      </div>
-      <div class="emptys none">
-        <img src="../assets/img/bookshelf_other.png"/>
-        <p>一本都没看，你这样真的好吗？</p>
-      </div>
-    </section>
 </template>
 
 <script>
   import "../assets/jquery-1.8.3.min.js"
   import "../assets/cat.js"
 export default {
-  name: 'bookshelf',
+  name: 'collection',
   mounted:function(){
     this.$emit("fatherTop","bTop");
   }
@@ -125,51 +115,12 @@ export default {
     overflow-y:scroll;
     position:relative;
   }
-  header{
-    width:100%;
-    height:0.44rem;
-    border-bottom:1px solid #dedbde;
-    box-sizing: border-box;
-    color:#313431;
-    background:#ffffff;
-    #header{
-      font-size:13px;
-      margin-left:0.065rem;
-      li{
-        float:left;
-        line-height:0.415rem;
-        padding:0 0.19rem;
-      }
-      .click{
-        border-bottom:0.025rem solid #94cf39;
-        color:#94cf39;
-        border-radius:0.015rem;
-        background:url(../assets/img/header_bg.png) no-repeat center bottom;
-        background-size: 0.31rem 0.045rem;
-      }
-    }
-    a{
-      float:right;
-      width:0.185rem;
-      height:0.185rem;
-      margin-top:0.125rem;
-      margin-right:0.155rem;
-      img{
-        width:0.185rem;
-        height:0.185rem;
-        vertical-align: top;
-      }
-    }
-  }
-  .section_bookshelf{
-    width:100%;
-    height:100%;
-    background:#ffffff;
-    border-top:1px solid #efebef;
-    .pic{
+  .pic{
       width:100%;
       overflow:hidden;
       padding-top:0.11rem;
+      overflow-x: hidden;
+      overflow-y:scroll;
       li{
         width:0.905rem;
         padding-bottom:0.17rem;
@@ -195,22 +146,4 @@ export default {
         }
       }
     }
-    .empty,.emptys{
-      display:none;
-      img{
-        margin-top: 1.58rem;
-        margin-left: 1.40rem;
-        width:1rem;
-        height:1.05rem;
-      }
-      p{
-        font-size:10px;
-        color:#999999;
-        text-align: center;
-      }
-    }
-    .show{
-      display:block;
-    }
-  }
 </style>

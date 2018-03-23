@@ -1,11 +1,6 @@
 <template>
-  <div>
+  <div class="my">
     <div id="big"></div>
-    <header class="header_my">
-      <a href="javascript:;"><img src="../assets/img/my_header_0.png"></a>
-      <h2>我的</h2>
-      <a href="javascript:;"><img src="../assets/img/my_header_1.png"></a>
-    </header>
     <section class="section_my">
       <div class="log">
         <a href="javascript:;">
@@ -36,11 +31,9 @@
   import "../assets/cat.js"
 export default {
   name: 'my',
-  /*data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }*/
+  mounted:function(){
+    this.$emit("fatherTop","mTop");
+  }
 }
 </script>
 
@@ -81,102 +74,83 @@ export default {
   body{
     background:#f2f2f2;
   }
-  #big{
+  .my{
     width:100%;
     height:100%;
-    background:#8c8c8c;
-    opacity: 0.4;
-    position:absolute;
-    top:0;
-    left:0;
-    display:none;
-  }
-  .header_my{
-    width:100%;
-    height:0.50rem;
-    border-bottom:1px solid #c3c3c3;
-    box-sizing: border-box;
-    background:#ffffff;
-    display:-webkit-flex;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-    a{
-      width:0.19rem;
-      height:0.19rem;
-      img{
-        width:0.19rem;
-        height:0.19rem;
-        vertical-align: top;
-      }
-    }
-    h2{
-      font-size:18px;
-      color:#353535;
-      margin:0 1.295rem;
-    }
-  }
-  .section_my{
-    width:100%;
-    height:100%;
-    .log{
+    overflow:hidden;
+    #big{
       width:100%;
-      height:0.75rem;
-      padding-top:0.15rem;
-      background:#ffffff;
-      border-bottom:1px solid #dcdcdc;
-      margin-bottom:0.10rem;
-      a{
-        height:0.60rem;
-        margin-left:0.15rem;
-        img{
-          width:0.605rem;
-          height:0.60rem;
-          float:left;
-          vertical-align: top;
-        }
-      }
-      p{
-        line-height:0.60rem;
-        margin-left:0.20rem;
-        float:left;
-        font-size:15px;
-        color:#333333;
-      }
+      height:100%;
+      background:#8c8c8c;
+      opacity: 0.4;
+      position:absolute;
+      top:0;
+      left:0;
+      display:none;
     }
-    .section_my_1{
-      width:96%;
-      background:#ffffff;
-      padding:0 2%;
-      margin-bottom:0.10rem;
-      li{
-        background:url(../assets/img/my_section_bg.png) no-repeat 3.5rem 0.14rem;
-        background-size:0.06rem 0.11rem;
-        padding:0.115rem 0 0.115rem 0.05rem;
-        border-bottom:1px solid #e9e9e9;
-        box-sizing: border-box;
+    .section_my{
+      width:100%;
+      height:100%;
+      .log{
+        width:100%;
+        height:0.75rem;
+        padding-top:0.15rem;
+        background:#ffffff;
+        border-bottom:1px solid #dcdcdc;
+        margin-bottom:0.10rem;
         a{
-          font-size:12px;
-          color:#353535;
-          line-height:0.18rem;
+          height:0.60rem;
+          margin-left:0.15rem;
           img{
-            width:0.18rem;
-            height:0.18rem;
+            width:0.605rem;
+            height:0.60rem;
+            float:left;
             vertical-align: top;
-            margin-right:0.14rem;
           }
         }
+        p{
+          line-height:0.60rem;
+          margin-left:0.20rem;
+          float:left;
+          font-size:15px;
+          color:#333333;
+        }
       }
-      .i{
-        border-bottom:none;
-      }
-      .late{
-        border-bottom:none;
-        border-top:1px solid #e9e9e9;
-        box-sizing: border-box;
-        padding-top:0.16rem;
-        padding-bottom:0.16rem;
-        background:url(../assets/img/my_section_btn.png) no-repeat 3.05rem 0.10rem;
-        background-size: 0.51rem 0.31rem;
+      .section_my_1{
+        width:96%;
+        background:#ffffff;
+        padding:0 2%;
+        margin-bottom:0.10rem;
+        li{
+          background:url(../assets/img/my_section_bg.png) no-repeat 3.5rem 0.14rem;
+          background-size:0.06rem 0.11rem;
+          padding:0.115rem 0 0.115rem 0.05rem;
+          border-bottom:1px solid #e9e9e9;
+          box-sizing: border-box;
+          a{
+            font-size:12px;
+            color:#353535;
+            line-height:0.18rem;
+            img{
+              width:0.18rem;
+              height:0.18rem;
+              vertical-align: top;
+              margin-right:0.14rem;
+            }
+          }
+        }
+        .i{
+          border-bottom:none;
+        }
+        .late{
+          border-bottom:none;
+          border-top:1px solid #e9e9e9;
+          box-sizing: border-box;
+          padding-top:0.16rem;
+          padding-bottom:0.16rem;
+          background:url(../assets/img/my_section_btn.png) no-repeat 3.05rem 0.10rem;
+          background-size: 0.51rem 0.31rem;
+        }
       }
     }
   }

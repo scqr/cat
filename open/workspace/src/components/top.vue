@@ -1,10 +1,10 @@
 <template>
   <header>
     <ul id="index">
-      <li class="click">推荐</li>
-      <li>榜单</li>
-      <li>分类</li>
-      <li>小说</li>
+      <router-link to="/brecommend"><li class="click">推荐</li></router-link>
+      <router-link to="/blist"><li>榜单</li></router-link>
+      <router-link to="/bclassify"><li>分类</li></router-link>
+      <router-link to="/bstory"><li>小说</li></router-link>
     </ul>
     <a href="javascript:;"><img src="../assets/img/header.png"/></a>
   </header>
@@ -14,12 +14,7 @@
   import "../assets/jquery-1.8.3.min.js"
   import "../assets/cat.js"
 export default {
-  name: 'top',
-  /*data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }*/
+  name: 'top'
 }
 </script>
 
