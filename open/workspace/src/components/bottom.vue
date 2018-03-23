@@ -1,19 +1,14 @@
 <template>
   <footer>
-    <!--<router-link to="/bookshelf">--><a href="javascript:;"><img src="../assets/img/footer_bookshelf.png"/><span>书架</span></a><!--</router-link>-->
-    <a href="javascript:;"><img src="../assets/img/footer_bookcity_color.png"/><span class="focus">书城</span></a>
-    <a href="javascript:;"><img src="../assets/img/footer_my.png"/><span>我的</span></a>
+    <router-link to="/bookshelf"><div class="a" ><img src="../assets/img/footer_bookshelf.png"/><span>书架</span></div></router-link>
+    <router-link to="/bookcity"><div class="a" ><img src="../assets/img/footer_bookcity_color.png"/><span class="focus">书城</span></div></router-link>
+    <router-link to="/my"><div class="a"><img src="../assets/img/footer_my.png"/><span>我的</span></div></router-link>
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'bottom',
-  /*data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }*/
+  name: 'bottom'
 }
 </script>
 
@@ -25,7 +20,7 @@ export default {
     height:0.52rem;
     background:#ffffff;
     border-top:1px solid #b5b2b5;
-    a{
+    .a{
       height:0.52rem;
       float:left;
       font-size:10px;
