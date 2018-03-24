@@ -1,7 +1,9 @@
 <template>
   <div class="one">
     <top></top>
-    <bookcity></bookcity>
+    <keep-alive>
+      <bookcity></bookcity>
+    </keep-alive>
     <Bottom></Bottom>
   </div>
 </template>

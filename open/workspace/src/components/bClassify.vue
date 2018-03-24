@@ -1686,12 +1686,7 @@
   import "../assets/banner.js"
 
 export default {
-  name: 'bClassify',
-  mounted:function () {
-    var oBox = document.getElementById('box');
-    oBox.addEventListener('mouseenter', enter());
-    oBox.addEventListener('mouseleave', leave());
-  }
+  name: 'bClassify'
 }
 </script>
 
