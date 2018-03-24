@@ -6,7 +6,6 @@
 
 <script>
   import "./assets/common.scss"
-  import "./assets/jquery-1.8.3.min"
   import "./assets/youziku.api.min.js"
   import bottom from "./components/bottom"
   import top from "./components/top"

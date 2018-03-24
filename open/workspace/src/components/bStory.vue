@@ -221,12 +221,7 @@
   import "../assets/banner.js"
 
 export default {
-  name: 'bStory',
-  mounted:function () {
-    var oBox = document.getElementById('box');
-    oBox.addEventListener('mouseenter', enter());
-    oBox.addEventListener('mouseleave', leave());
-  }
+  name: 'bStory'
 }
 </script>
 

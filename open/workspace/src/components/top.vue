@@ -1,7 +1,7 @@
 <template>
   <header>
     <ul id="index">
-      <router-link to="/brecommend"><li class="click">推荐</li></router-link>
+      <router-link to="/brecommend"><li class="a">推荐</li></router-link>
       <router-link to="/blist"><li>榜单</li></router-link>
       <router-link to="/bclassify"><li>分类</li></router-link>
       <router-link to="/bstory"><li>小说</li></router-link>
@@ -12,9 +12,15 @@
 
 <script>
   import "../assets/jquery-1.8.3.min.js"
-  import "../assets/cat.js"
+
 export default {
-  name: 'top'
+  name: 'top',
+  mounted:function () {
+    $(".a").click(function() {
+      console.log(this);
+      $(this).addClass('click');
+    });
+  }
 }
 </script>
 
